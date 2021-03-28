@@ -1,17 +1,15 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
 
-const firestore = firebase.firestore();
+import styled from "styled-components";
 
-firestore.collection("user");
+const Text = styled.div`
+  color: red;
+  font-size: 28px;
+`
 
-firestore.collection("user").doc("KG0tZVm0Z6EHweTKuQUv")
-
-firestore
-  .collection("user")
-  .doc("KG0tZVm0Z6EHweTKuQUv")
-  .collection("cartItems")
-  .doc("Mnr1toLkat3FrUaLnb7c")
-
-
-firebase.doc("users/KG0tZVm0Z6EHweTKuQUv/cartItems/Mnr1toLkat3FrUaLnb7c")
+function App = () {
+  return (
+    <Text isActive={true}>I am a styled component</Text>
+  );
+}

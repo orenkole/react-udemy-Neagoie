@@ -6,8 +6,12 @@ import CollectionPreview from "../collection-preview/collection-preview.componen
 import "./collections-overview.styles.scss";
 
 const CollectionsOverview = ({collections}) => {
+  const textStyles = {
+    color: "red",
+    fontSize: "24px",
+  }
   return (
-    <div className="collections-overview">
+    <div className="collections-overview" style={textStyles}>
       {
         collections.map(({id, ...otherCollectionProps}) => (
           <CollectionPreview key={id} {...otherCollectionProps}/>
